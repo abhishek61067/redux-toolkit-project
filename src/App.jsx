@@ -6,6 +6,7 @@ function App() {
     <div id="appPageId">
       <CakeView />
     </div>
+    //
   );
 }
 
