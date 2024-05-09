@@ -9,7 +9,9 @@ const initialState = {
 const cakeSlice = createSlice({
   name: "cake",
   initialState,
+  // reducer is a function which updates or mutate state based on action
   reducers: {
+    // action creators
     ordered: (state) => {
       // directly mutating or updating the state
       state.numOfCakes--;
@@ -24,4 +26,5 @@ const cakeSlice = createSlice({
 const cakeRootReducer = cakeSlice.reducer;
 export default cakeRootReducer;
 
+// action creators
 export const { ordered, restocked } = cakeSlice.actions;
