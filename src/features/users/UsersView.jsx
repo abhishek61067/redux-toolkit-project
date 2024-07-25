@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { fetchUsers } from "./usersSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { isEmpty } from "../utils/isEmpty";
 
 const UsersView = () => {
   const users = useSelector((state) => state.users);
@@ -17,7 +18,7 @@ const UsersView = () => {
         <p>loading..</p>
       ) : users.error ? (
         <p>users.error</p>
-      ) : users.users.length > 0 ? (
+      ) : !isEmpty(users.users) ? (
         users.users.map((user) => <li key={user.id}>{user.name}</li>)
       ) : (
         "empty data"
