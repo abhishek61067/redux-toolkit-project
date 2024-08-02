@@ -13,9 +13,9 @@ const UsersView = () => {
 
   return (
     <div id="usersPageId">
-      <h2>List of users</h2>
+      {/* <h2>List of users</h2> */}
       {users.loading ? (
-        <p>loading..</p>
+        <h1>loading..</h1>
       ) : users.error ? (
         <p>users.error</p>
       ) : !isEmpty(users.users) ? (

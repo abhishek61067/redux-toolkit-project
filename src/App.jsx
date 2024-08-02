@@ -6,9 +6,9 @@ import UsersView from "./features/users/UsersView";
 function App() {
   return (
     <div id="appPageId">
+      <UsersView />
       <CakeView />
       <IcecreamView />
-      <UsersView />
     </div>
     //
   );

@@ -10,5 +10,6 @@ const store = configureStore({
     users: usersRootReducer,
   },
 });
+console.log(store.getState());
 
 export default store;

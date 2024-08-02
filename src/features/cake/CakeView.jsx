@@ -4,7 +4,10 @@ import { useState } from "react";
 
 const CakeView = () => {
   const [value, setValue] = useState(1);
-  const numOfCakes = useSelector((state) => state.cake.numOfCakes);
+  const numOfCakes = useSelector((state) => {
+    console.log("state from useSelector: ", state);
+    return state.cake.numOfCakes;
+  });
   const dispatch = useDispatch();
 
   const handleValue = (e) => {
