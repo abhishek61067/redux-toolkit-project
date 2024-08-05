@@ -7,6 +7,7 @@ const initialState = {
 };
 
 // generates pending,fullfilled and rejected action types
+// return action types based on promise
 export const fetchUsers = createAsyncThunk("youcanputanynamehere", () => {
   return axios
     .get("https://jsonplaceholder.typicode.com/users")
@@ -30,6 +31,4 @@ export const usersSlice = createSlice({
     });
   },
 });
-const usersRootReducer = usersSlice.reducer;
-
-export default usersRootReducer;
+export default usersRootReducer = usersSlice.reducer;
